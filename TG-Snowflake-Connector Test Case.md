@@ -205,8 +205,14 @@ GSQL > END
 21/11/23 03:24:17 INFO loadSuccess: [ conditions ] load success, consume time: 82 s
 21/11/23 03:24:17 INFO progress: The total time consuming:120s
 ```
+6. If the spark cluster is installed in a local MAC machine, please add the below configuraiton to TG-Snowflake-Connector/yom.yaml file and between <plugin>ContentsToBeAdded</plugin>.
+  <configuration>
+        <args>
+            <arg>-nobootcp</arg>
+        </args>
+    </configuration>
 
-6. Query vertex num in graph:
+7. Query vertex num in graph: 
 
    ```shell
    GSQL > BEGIN
